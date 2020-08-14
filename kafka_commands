@@ -1,0 +1,14 @@
+# Delete schemas
+curl -X DELETE http://host:port/path
+
+# create new topic
+kafka-topics --bootstrap-server localhost:port --create --replication-factor n --partitions n --topic name
+
+# reset consumer offsets
+kafka-consumer-groups --bootstrap-server localhost:port --group name --topic name --reset-offsets --to-earliest --execute
+
+# list topics
+kafka-topics --bootstrap-server localhost:port --list
+
+# delete groups
+
